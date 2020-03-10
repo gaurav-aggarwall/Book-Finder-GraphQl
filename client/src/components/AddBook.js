@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 
-import { addBookQuery, getAuthorsQuery, getBooksQuery } from '../queries/queries';
+import { addBookMutation, getAuthorsQuery, getBooksQuery } from '../queries/queries';
 
 export default function AddBook() {
     const [name, setName] = useState('');
@@ -9,7 +9,7 @@ export default function AddBook() {
     const [authorId, setAuthorId] = useState('');
 
     let { loading, error, data } = useQuery(getAuthorsQuery);
-    let [saveBook] = useMutation(addBookQuery);
+    let [saveBook] = useMutation(addBookMutation);
 
     let authors = <option>Loading Authors...</option>;
 
