@@ -42,22 +42,22 @@ export default function AddBook() {
 	return (
 		<div>
 			<form id='add-book' onSubmit={submitForm}>
-                <div className='filed'>
+                <div className='field'>
                     <label>Book Name:</label>
                     <input type='text' value={name} onChange={e => setName(e.target.value)}/>
                 </div>
-                <div className='filed'>
+                <div className='field'>
                     <label>Genre:</label>
                     <input type='text' value={genre} onChange={e => setGenre(e.target.value)}/>
                 </div>
-                <div className='filed'>
+                <div className='field'>
                     <label>Author:</label>
                     <select value={authorId} onChange={e => setAuthorId(e.target.value)}>
                         <option>Select Author</option>
                         {authors}
                     </select>
                 </div>
-                <button>Add Book</button>
+                <button>+</button>
             </form>
 		</div>
 	);
